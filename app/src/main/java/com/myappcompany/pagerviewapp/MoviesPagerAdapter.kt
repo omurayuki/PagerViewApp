@@ -9,7 +9,7 @@ private const val MAX_VALUE = 200
 class MoviesPagerAdapter(fragmentManager: FragmentManager, private val movies: ArrayList<Movie>): FragmentStatePagerAdapter(fragmentManager) {
 
     override fun getItem(position: Int): Fragment {
-//        MovieFragment.newInstance(movies[position % movies.size])
+        return MovieFragment.newInstance(movies[position % movies.size])
     }
 
     override fun getCount(): Int {
